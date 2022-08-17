@@ -1,12 +1,12 @@
 fn main() {
-    let s = String::from("hola mundo");
+    let _referencia_a_nada = colgante();
 
-    let longitud = calcula_longitud(&s);
-    println!("la longitud de la cadena ({}) es: {}", s, longitud);
 }
 
-fn calcula_longitud(cadena: &String) -> usize{
-    let aux: usize = cadena.len();
-    aux
+fn colgante() -> String {
+    let s = String::from("referencia colgante");
+    s
 }
+
+
 
