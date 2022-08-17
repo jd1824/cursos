@@ -1,8 +1,12 @@
 fn main() {
-    let cadena1 = String::from("primera cadena");
-    let cadena2 = cadena1.clone();
+    let s = String::from("hola mundo");
 
-    println!("cadena2 {}", cadena2);
-    println!("cadena1 {}", cadena1);
+    let longitud = calcula_longitud(&s);
+    println!("la longitud de la cadena ({}) es: {}", s, longitud);
+}
+
+fn calcula_longitud(cadena: &String) -> usize{
+    let aux: usize = cadena.len();
+    aux
 }
 
