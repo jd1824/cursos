@@ -1,12 +1,21 @@
 fn main() {
-    let _referencia_a_nada = colgante();
+    let cadena = String::from("hola mundo del rust");
+    println!("la primera palabra de la cadena es: {}", primera_palabra(&cadena));
 
 }
 
-fn colgante() -> String {
-    let s = String::from("referencia colgante");
-    s
+fn primera_palabra(cadena: &str) -> &str {
+    let bytes = cadena.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate(){
+        if item == b' '{
+            return &cadena[0..i];
+        }
+    }
+    &cadena[..]
 }
+
+
 
 
 
